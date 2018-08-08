@@ -1,5 +1,6 @@
 require "json"
 require "faraday"
+require 'faraday-rate_limiter'
 require "time"
 require "airrecord/version"
 require "airrecord/client"
