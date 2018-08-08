@@ -14,6 +14,7 @@ module Airrecord
         "Authorization" => "Bearer #{api_key}",
         "X-API-VERSION" => "0.1.0",
       }) { |conn|
+        conn.request :rate_limiter, interval: 0.25
         conn.adapter :net_http_persistent
       }
     end
